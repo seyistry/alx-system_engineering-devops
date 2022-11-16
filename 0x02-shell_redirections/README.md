@@ -1,1 +1,1 @@
-directory for shell redirection
+# directory for shell redirection
