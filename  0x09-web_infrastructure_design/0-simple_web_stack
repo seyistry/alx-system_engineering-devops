@@ -1,0 +1,34 @@
+	What is a server
+
+Servers are physical machines (as hardwares), virtual machines or softwares (computer programs) that serve or provide functionality to other programs or devices called “clients”.
+
+    What is the role of the domain name
+
+The role of the domain name is to replace complex IP addresses numbers into easily understandable names so humans can remember and communicate them in a better way.
+
+    What is the role of the web server
+
+Web servers are what make Web hosting possible, that is, the possibility of renting a space on a server to store the files of our site.
+
+The fundamental role of a Web Server
+
+The main function of a Web server is to store the files of a site and broadcast them over the Internet so that they can be visited by users. 
+
+    What is the role of the application server
+
+The application server is the intermediary between browser-based databases and back-end databases and legacy systems. 
+
+    What is the role of the database
+
+The role of the database is to make the information gathered organized so it can be easily accessed, managed and updated.
+
+    What is the server using to communicate with the computer of the user requesting the website
+
+The server is using the HTTP (Hypertext Transfer Protocol), which enables the transfer of resource and data, such as HTML documents between the server and the client.
+
+Issues with the simple web infrastructure
+
+1    One of the issues of having a simple web infrastructure, has to do with the SPOF (Single Point of Failure) where if component of the system fails, there is no backup that can support the continuity of the functionality of the system, bringing the whole system to a collapse by being unable to operate.
+2    Also, whenever some structure or node in the system needs to be repaired, the whole system has to be shut down, while the maintenance is done. Then, client requests cannot be attended during this period of time.
+3    Overload of traffic can be a risk to the server capacity. This, because there is no possibility to scale the service with additional servers as backup. Leading to a possible breakdown of the web page and client requests, as traffic surpasses servers capacity.
+
