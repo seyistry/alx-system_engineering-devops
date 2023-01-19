@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Installs nginx and set a default messasge
+# port 80 as a default
+
+apt-get update
+file = "/etc/nginx/sites-available/default"
+new_string="server_name app-space.tech;\nrewrite ^/(.*)$ http://app-space.tech/redirect_me permanent;"
+sed -i "s/server_name/$new_string/" file
+sudo systemctl restart nginx
