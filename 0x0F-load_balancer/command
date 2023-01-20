@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+sudo sed -i "1i\\\tadd_header X-Served-By $HOSTNAME;" ./test

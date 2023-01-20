@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # redicts to another url
 
-sudo apt-get update
+sudo apt-get -y git update
 sudo apt-get -y install nginx
 sudo ufw allow 'Nginx HTTP'
 sudo service nginx start
