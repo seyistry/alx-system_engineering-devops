@@ -7,7 +7,7 @@ sudo add-apt-repository ppa:vbernat/haproxy-2.7 -y
 sudo apt-get install haproxy=2.7.\* -y
 apt-get update
 
-haproxy_text="\\\n\nfrontend http_front\n\tbind *:80\n\tstats uri /haproxy?stats\n\tdefault_backend server_group\n\nbackend server_group\n\tbalance roundrobin\n\tserver 85167-web-01 3.86.13.57:80 check\n\tserver 85167-web-02 54.89.30.237:80 check"
+haproxy_text="\\\n\nfrontend http_front\n\tbind *:80\n\tmode http\n\tdefault_backend server_group\n\nbackend server_group\n\tbalance roundrobin\n\tserver 85167-web-01 3.86.13.57:80 check\n\tserver 85167-web-02 54.89.30.237:80 check"
 haproxy_path="/etc/haproxy/haproxy.cfg"
 sudo sed -i "/errorfile 504 \/etc\/haproxy\/errors\/504.http/a $haproxy_text" $haproxy_path
 
