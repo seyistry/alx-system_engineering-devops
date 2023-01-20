@@ -21,4 +21,3 @@ sudo sed -i "/# First attempt to serve request as file, then/a \\t\tadd_header X
 
 sudo service nginx restart
 sudo service nginx reload
-
