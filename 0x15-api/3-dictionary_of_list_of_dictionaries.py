@@ -16,7 +16,8 @@ if __name__ == "__main__":
     if user_details.status_code == 200:
         users = user_details.json()
         for user in users:
-            req_user_todos = requests.get(f"{start_url}/{user['id']}/todos")
+            req_user_todos = requests.get(
+                "{}/{}/todos".format(start_url, user['id']))
             todos = req_user_todos.json()
             for i in todos:
                 obj = {}
@@ -24,7 +25,7 @@ if __name__ == "__main__":
                 obj["completed"] = i["completed"]
                 obj["username"] = user['username']
                 row.append(obj)
-            json_dict[f"{user['id']}"] = row
+            json_dict["{}".format(user['id'])] = row
             row = []
         json_object = json.dumps(json_dict)
         with open('todo_all_employees.json', 'w',
