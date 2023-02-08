@@ -26,15 +26,16 @@ if __name__ == "__main__":
         username = (details.get("username"))
         for i in todos:
             obj = {}
-            obj["userId"] = "\"{}\"".format(i["userId"])
-            obj["username"] = "\"{}\"".format(username)
-            obj["completed"] = "\"{}\"".format(i["completed"])
-            obj["title"] = "\"{}\"".format(i["title"])
+            obj["userId"] = "{}".format(i["userId"])
+            obj["username"] = "{}".format(username)
+            obj["completed"] = "{}".format(i["completed"])
+            obj["title"] = "{}".format(i["title"])
             row.append(obj)
 
         with open('{}.csv'.format(emp_id), 'w', encoding='UTF8',
                   newline='') as f:
-            writer = csv.DictWriter(f, fieldnames=headers)
+            writer = csv.DictWriter(f, fieldnames=headers, quotechar='"',
+                                    quoting=csv.QUOTE_ALL)
             writer.writerows(row)
     else:
         print('None')
