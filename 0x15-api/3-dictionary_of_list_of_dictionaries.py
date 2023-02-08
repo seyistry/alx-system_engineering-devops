@@ -1,16 +1,10 @@
 #!/usr/bin/python3
-""" a Python script that, using this REST API,
-    for a given employee ID, returns information
-    about his/her TODO list progress.
-"""
+""" a Python script that, using this REST API"""
 
 if __name__ == "__main__":
-    from sys import argv
     import requests
     import json
 
-    """_summary_
-    """
     headers = ["USER_ID", "USERNAME", "TASK_COMPLETED_STATUS", "TASK_TITLE"]
     row = []
     json_dict = {}
