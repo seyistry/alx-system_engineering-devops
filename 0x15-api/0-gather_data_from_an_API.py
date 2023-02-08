@@ -5,8 +5,8 @@
 """
 
 if __name__ == "__main__":
-    from sys import argv
     import requests
+    from sys import argv
 
     emp_id = argv[1]
     EMPLOYEE_NAME = None
@@ -22,11 +22,11 @@ if __name__ == "__main__":
         todos = user_todos.json()
         EMPLOYEE_NAME = (details.get("name"))
         for i in todos:
-            if i["completed"] is True:
+            if i.get("completed") is True:
                 if NUMBER_OF_DONE_TASKS == 0:
-                    TASK_TITLE = TASK_TITLE + ("\t {}".format(i["title"]))
+                    TASK_TITLE = TASK_TITLE + ("\t {}".format(i.get("title")))
                 else:
-                    TASK_TITLE = TASK_TITLE + ("\n\t {}".format(i["title"]))
+                    TASK_TITLE = TASK_TITLE + ("\n\t {}".format(i.get("title")))
                 NUMBER_OF_DONE_TASKS = NUMBER_OF_DONE_TASKS + 1
         TOTAL_NUMBER_OF_TASKS = len(todos)
         print("Employee {} is done with tasks({}/{}):".format(EMPLOYEE_NAME,
