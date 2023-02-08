@@ -26,7 +26,8 @@ if __name__ == "__main__":
                 if NUMBER_OF_DONE_TASKS == 0:
                     TASK_TITLE = TASK_TITLE + ("\t {}".format(i.get("title")))
                 else:
-                    TASK_TITLE = TASK_TITLE + ("\n\t {}".format(i.get("title")))
+                    TASK_TITLE = TASK_TITLE + ("\n\t {}".format(
+                        i.get("title")))
                 NUMBER_OF_DONE_TASKS = NUMBER_OF_DONE_TASKS + 1
         TOTAL_NUMBER_OF_TASKS = len(todos)
         print("Employee {} is done with tasks({}/{}):".format(EMPLOYEE_NAME,
