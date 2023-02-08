@@ -17,8 +17,8 @@ if __name__ == "__main__":
     NUMBER_OF_DONE_TASKS = 0
     TASK_TITLE = ""
     start_url = "https://jsonplaceholder.typicode.com/users"
-    req_user_details = f"{start_url}/{emp_id}"
-    req_user_todos = f"{start_url}/{emp_id}/todos"
+    req_user_details = "{}/{}".format(start_url, emp_id)
+    req_user_todos = "{}/{}/todos".format(start_url, emp_id)
     user_details = requests.get(req_user_details)
     user_todos = requests.get(req_user_todos)
     if user_details.status_code == 200:
@@ -32,9 +32,10 @@ if __name__ == "__main__":
             obj["completed"] = i["completed"]
             obj["username"] = username
             row.append(obj)
-        json_dict[f"{user_id}"] = row
+        json_dict["{}".format(user_id)] = row
         json_object = json.dumps(json_dict)
-        with open(f'{emp_id}.json', 'w', encoding='UTF8', newline='') as f:
+        with open('{}.json'.format(emp_id), 'w',
+                  encoding='UTF8', newline='') as f:
             f.write(json_object)
     else:
         print('None')

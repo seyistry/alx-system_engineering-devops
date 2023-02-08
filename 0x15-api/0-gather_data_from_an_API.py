@@ -29,8 +29,8 @@ if __name__ == "__main__":
                     TASK_TITLE = TASK_TITLE + (f'\n\t {i["title"]}')
                 NUMBER_OF_DONE_TASKS = NUMBER_OF_DONE_TASKS + 1
         TOTAL_NUMBER_OF_TASKS = len(todos)
-        print(f"Employee {EMPLOYEE_NAME} is done with \
-tasks({NUMBER_OF_DONE_TASKS}/{TOTAL_NUMBER_OF_TASKS}):")
+        print("Employee {} is done with tasks({}/{}):".format(EMPLOYEE_NAME,
+              NUMBER_OF_DONE_TASKS, TOTAL_NUMBER_OF_TASKS))
         print(TASK_TITLE)
     else:
         print('None')
