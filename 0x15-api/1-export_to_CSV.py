@@ -9,7 +9,7 @@ if __name__ == "__main__":
     import requests
     import csv
 
-    headers = ["USER_ID", "USERNAME", "TASK_COMPLETED_STATUS", "TASK_TITLE"]
+    headers = ["userId", "username", "completed", "title"]
     emp_id = argv[1]
     row = []
     EMPLOYEE_NAME = None
