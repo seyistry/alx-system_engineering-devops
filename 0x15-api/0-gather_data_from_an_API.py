@@ -13,8 +13,8 @@ if __name__ == "__main__":
     NUMBER_OF_DONE_TASKS = 0
     TASK_TITLE = ""
     start_url = "https://jsonplaceholder.typicode.com/users"
-    req_user_details = f"{start_url}/{emp_id}"
-    req_user_todos = f"{start_url}/{emp_id}/todos"
+    req_user_details = "{}/{}".format(start_url, emp_id)
+    req_user_todos = "{}/{}/todos".format(start_url, emp_id)
     user_details = requests.get(req_user_details)
     user_todos = requests.get(req_user_todos)
     if user_details.status_code == 200:
