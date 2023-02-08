@@ -24,9 +24,9 @@ if __name__ == "__main__":
         for i in todos:
             if i["completed"] is True:
                 if NUMBER_OF_DONE_TASKS == 0:
-                    TASK_TITLE = TASK_TITLE + (f'\t {i["title"]}')
+                    TASK_TITLE = TASK_TITLE + ("\t {}".format(i["title"]))
                 else:
-                    TASK_TITLE = TASK_TITLE + (f'\n\t {i["title"]}')
+                    TASK_TITLE = TASK_TITLE + ("\n\t {}".format(i["title"]))
                 NUMBER_OF_DONE_TASKS = NUMBER_OF_DONE_TASKS + 1
         TOTAL_NUMBER_OF_TASKS = len(todos)
         print("Employee {} is done with tasks({}/{}):".format(EMPLOYEE_NAME,
