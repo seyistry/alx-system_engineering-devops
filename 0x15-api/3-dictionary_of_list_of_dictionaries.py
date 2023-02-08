@@ -31,5 +31,6 @@ if __name__ == "__main__":
             json_dict[f"{user['id']}"] = row
             row = []
         json_object = json.dumps(json_dict)
-        with open('todo_all_employees.json', 'w', encoding='UTF8', newline='') as f:
+        with open('todo_all_employees.json', 'w',
+                  encoding='UTF8', newline='') as f:
             f.write(json_object)
