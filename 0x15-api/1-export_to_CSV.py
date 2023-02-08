@@ -26,10 +26,10 @@ if __name__ == "__main__":
         username = (details.get("username"))
         for i in todos:
             obj = {}
-            obj["userId"] = i["userId"]
-            obj["username"] = username
-            obj["completed"] = i["completed"]
-            obj["title"] = i["title"]
+            obj["userId"] = "\"{}\"".format(i["userId"])
+            obj["username"] = "\"{}\"".format(username)
+            obj["completed"] = "\"{}\"".format(i["completed"])
+            obj["title"] = "\"{}\"".format(i["title"])
             row.append(obj)
 
         with open('{}.csv'.format(emp_id), 'w', encoding='UTF8',
